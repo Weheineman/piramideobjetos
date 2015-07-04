@@ -9,6 +9,9 @@ class Celda:
     #Parte fea de fijarse
     flag=flag or hijo1.Resolv() or hijo2.Resolv()
     return flag
+    
+  def setval(self, a)
+    
 
 
 class CeldaAbajo(Celda):
@@ -20,6 +23,20 @@ class CeldaAbajo(Celda):
 
 
 #HACER PIRAMIDE A MANO
+piso0=CeldaAbajo()
+piso1=CeldaAbajo()
+piso2=CeldaAbajo()
+piso3=CeldaAbajo()
+piso4=CeldaAbajo()
+piso5=CeldaAbajo()
+celda40=(piso0,piso1)
+celda41=(piso1,piso2)
+celda42=(piso2,piso3)
+celda43=(piso3,piso4)
+celda44=(piso4,piso5)
+celda30=(celda40,celda41)
+celda30=(celda40,celda41)
+celda30=(celda40,celda41)
 
 
 #INPUT
