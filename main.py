@@ -1,6 +1,6 @@
 class Celda:
   def __init__(self,h1,h2):
-    self.valor=0
+    self.val=0
     self.hijo1=h1
     self.hijo2=h2
   
@@ -11,7 +11,7 @@ class Celda:
     return flag
     
   def setval(self, a)
-    
+    self.val=a
 
 
 class CeldaAbajo(Celda):
