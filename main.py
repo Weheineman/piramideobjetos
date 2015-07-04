@@ -11,6 +11,12 @@ class Celda:
     flag=flag or hijo1.Resolv() or hijo2.Resolv()
     return flag
     
+  def Solved(self):
+    flag=true
+    if(self.val==0)
+      flag=false
+    flag=flag and hijo1.Solved() or hijo2.Solved()
+    
   def setval(self, a)
     self.val=a
 
