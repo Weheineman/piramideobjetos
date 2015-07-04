@@ -48,6 +48,28 @@ celda00=(celda10,celda11)
 
 
 #INPUT
+print ("Ingrese los valores de las celdas por fila desde arriba y desde la izquierda, ingrese 0 en caso de que la celda no tenga contenido:\n")
+celda00.setval(input())
+celda10.setval(input())
+celda11.setval(input())
+celda20.setval(input())
+celda21.setval(input())
+celda22.setval(input())
+celda30.setval(input())
+celda31.setval(input())
+celda32.setval(input())
+celda33.setval(input())
+celda40.setval(input())
+celda41.setval(input())
+celda42.setval(input())
+celda43.setval(input())
+celda44.setval(input())
+piso0.setval(input())
+piso1.setval(input())
+piso2.setval(input())
+piso3.setval(input())
+piso4.setval(input())
+piso5.setval(input())
 
 
 #PROCESO
