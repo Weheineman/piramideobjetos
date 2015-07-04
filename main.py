@@ -85,4 +85,30 @@ while(sinresolver)
   .Resolv()
 
 #OUTPUT
-print
+#OUTPUT
+print (celda00.val)
+print "\n"
+print (celda10.val)
+print (celda11.val)
+print "\n"
+print (celda20.val)
+print (celda21.val)
+print (celda22.val)
+print "\n"
+print (celda30.val)
+print (celda31.val)
+print (celda32.val)
+print (celda33.val)
+print "\n"
+print (celda40.val)
+print (celda41.val)
+print (celda42.val)
+print (celda43.val)
+print (celda44.val)
+print "\n"
+print (piso1.val)
+print (piso2.val)
+print (piso3.val)
+print (piso4.val)
+print (piso5.val)
+print (piso6.val)
