@@ -35,8 +35,15 @@ celda42=(piso2,piso3)
 celda43=(piso3,piso4)
 celda44=(piso4,piso5)
 celda30=(celda40,celda41)
-celda30=(celda40,celda41)
-celda30=(celda40,celda41)
+celda31=(celda41,celda42)
+celda32=(celda42,celda43)
+celda33=(celda43,celda44)
+celda20=(celda30,celda31)
+celda21=(celda31,celda32)
+celda22=(celda32,celda33)
+celda10=(celda20,celda21)
+celda11=(celda21,celda22)
+celda00=(celda10,celda11)
 
 
 #INPUT
