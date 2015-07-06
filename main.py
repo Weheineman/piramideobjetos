@@ -26,10 +26,14 @@ class Celda:
 		flag=True
 		if(self.val==0):
 			flag=False
-		flag=flag and self.hijo1.Solved() or self.hijo2.Solved()
+		flag=flag and self.hijo1.Solved() and self.hijo2.Solved()
+		return flag
 		
 	def setval(self, a):
 		self.val=a
+
+	def tostr(self):
+		return str(self.val)
 
 
 class CeldaAbajo(Celda):
@@ -39,8 +43,8 @@ class CeldaAbajo(Celda):
 	def Resolv(self):
 		return False
 
-	def Solved(self):
-  		return self.val==0
+	def Solved(self): 
+		return (self.val!=0)
 
 
 #HACER PIRAMIDE A MANO
@@ -70,58 +74,70 @@ celda00=Celda(celda10,celda11)
 #INPUT
 print ("Ingrese los valores de las celdas por fila desde arriba y desde la izquierda, ingrese 0 en caso de que la celda no tenga contenido:")
 print("Ingrese la celda número 1 de la fila 1")
-celda00.setval(input())
+celda00.setval(int(input()))
 print("Ingrese la celda número 1 de la fila 2")
-celda10.setval(input())
+celda10.setval(int(input()))
 print("Ingrese la celda número 2 de la fila 2")
-celda11.setval(input())
+celda11.setval(int(input()))
 print("Ingrese la celda número 1 de la fila 3")
-celda20.setval(input())
+celda20.setval(int(input()))
 print("Ingrese la celda número 2 de la fila 3")
-celda21.setval(input())
+celda21.setval(int(input()))
 print("Ingrese la celda número 3 de la fila 3")
-celda22.setval(input())
+celda22.setval(int(input()))
 print("Ingrese la celda número 1 de la fila 4")
-celda30.setval(input())
+celda30.setval(int(input()))
 print("Ingrese la celda número 2 de la fila 4")
-celda31.setval(input())
+celda31.setval(int(input()))
 print("Ingrese la celda número 3 de la fila 4")
-celda32.setval(input())
+celda32.setval(int(input()))
 print("Ingrese la celda número 4 de la fila 4")
-celda33.setval(input())
+celda33.setval(int(input()))
 print("Ingrese la celda número 1 de la fila 5")
-celda40.setval(input())
+celda40.setval(int(input()))
 print("Ingrese la celda número 2 de la fila 5")
-celda41.setval(input())
+celda41.setval(int(input()))
 print("Ingrese la celda número 3 de la fila 5")
-celda42.setval(input())
+celda42.setval(int(input()))
 print("Ingrese la celda número 4 de la fila 5")
-celda43.setval(input())
+celda43.setval(int(input()))
 print("Ingrese la celda número 5 de la fila 5")
-celda44.setval(input())
+celda44.setval(int(input()))
 print("Ingrese la celda número 1 de la fila 6")
-piso0.setval(input())
+piso0.setval(int(input()))
 print("Ingrese la celda número 2 de la fila 6")
-piso1.setval(input())
+piso1.setval(int(input()))
 print("Ingrese la celda número 3 de la fila 6")
-piso2.setval(input())
+piso2.setval(int(input()))
 print("Ingrese la celda número 4 de la fila 6")
-piso3.setval(input())
+piso3.setval(int(input()))
 print("Ingrese la celda número 5 de la fila 6")
-piso4.setval(input())
+piso4.setval(int(input()))
 print("Ingrese la celda número 6 de la fila 6")
-piso5.setval(input())
+piso5.setval(int(input()))
 
 
 #PROCESO
 sinresolver=True
 while(sinresolver):
   sinresolver=celda00.Resolv()
-  
+
 #OUTPUT
-print (celda00.val)
-print (str(celda10.val)+str(celda11.val))
-print (str(celda20.val)+str(celda21.val)+str(celda22.val))
-print (str(celda30.val)+str(celda31.val)+str(celda32.val)+str(celda33.val))
-print (str(celda40.val)+str(celda41.val)+str(celda42.val)+str(celda43.val)+str(celda44.val))
-print (str(piso1.val)+str(piso2.val)+str(piso3.val)+str(piso4.val)+str(piso5.val)+str(piso6.val))
+if(celda00.Solved()):
+	print ("")
+	print ("RESULTADO")
+	print ("\t"+"\t"+"\t"+"\t"+"\t"+celda00.tostr()+"\t"+"\t"+"\t"+"\t"+"\t")
+	print ("")
+	print ("\t"+"\t"+"\t"+"\t"+celda10.tostr()+"\t"+"\t"+celda11.tostr()+"\t"+"\t"+"\t"+"\t")
+	print ("")
+	print ("\t"+"\t"+"\t"+celda20.tostr()+"\t"+"\t"+celda21.tostr()+"\t"+"\t"+celda22.tostr()+"\t"+"\t"+"\t")
+	print ("")
+	print ("\t"+"\t"+celda30.tostr()+"\t"+"\t"+celda31.tostr()+"\t"+"\t"+celda32.tostr()+"\t"+"\t"+celda33.tostr()+"\t"+"\t")
+	print ("")
+	print ("\t"+celda40.tostr()+"\t"+"\t"+celda41.tostr()+"\t"+"\t"+celda42.tostr()+"\t"+"\t"+celda43.tostr()+"\t"+"\t"+celda44.tostr()+"\t")
+	print ("")
+	print (piso0.tostr()+"\t"+"\t"+piso1.tostr()+"\t"+"\t"+piso2.tostr()+"\t"+"\t"+piso3.tostr()+"\t"+"\t"+piso4.tostr()+"\t"+"\t"+piso5.tostr())
+
+else:
+	print("")
+	print("No se puede resolver. Al menos no por un niño de 10 años.")
